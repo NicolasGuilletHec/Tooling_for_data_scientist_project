@@ -1,29 +1,33 @@
-# Tooling_for_data_scientist_project
+# Simple Streamlit Data App
 
-# Simple Greeting App
+A minimal **Streamlit app** that loads a CSV, filters rows by a numeric threshold, 
+and shows the results interactively.  
+The sidebar also displays the **current date and time**.
 
-A minimal Python app that greets a user with the current timestamp.  
-This serves as a starting point to add tests, Docker, CI/CD, etc.
+This project is containerized with Docker, includes tests for the data utilities, 
+and runs CI to validate changes automatically.
 
 ---
 
-## 🔍 Overview
+## �� Overview
 
-This repository contains a simple Python application:
-
-- **app.py** — contains a function `greet(name)` that returns `"Hello, 
-{name}! The current time is …"`.
-- When run, it prints the greeting with the current date/time.
-- We will progressively build on this: add tests, containerization, CI/CD 
-pipelines.
+- **app.py** → Streamlit UI (loads data, filters, shows time)  
+- **data_utils.py** → data logic (`load_data`, `filter_by_threshold`)  
+- **tests/** → pytest unit tests for the data utils  
+- **sample_data.csv** → demo dataset  
+- **Dockerfile** → containerization  
+- **.github/workflows/ci.yml** → GitHub Actions CI workflow  
 
 ---
 
 ## ✨ Features
 
-- Very minimal code to illustrate structure and development best practices  
-- Easily extensible  
-- Ready for adding testing, Docker, deployment, etc.
+- Streamlit interface with sidebar date/time  
+- Load and preview CSV data  
+- Filter rows interactively by numeric threshold  
+- Fully containerized with Docker  
+- Tested with pytest (data import & filtering)  
+- CI pipeline to run tests on every commit/PR  
 
 ---
 
@@ -31,15 +35,14 @@ pipelines.
 
 ### Prerequisites
 
-- Python 3.7+  
-- (Optional but recommended) A virtual environment tool like `venv` or 
-`pipenv`
+- Python 3.8+  
+- (Optional) Docker  
+- (Optional) virtual environment (`venv`, `pipenv`, etc.)
 
 ### Installation
 
-1. Clone the repo:
-
-   ```bash
-   git clone https://github.com/<your-username>/simple-greeting-app.git
-   cd simple-greeting-app
+Clone the repo:
+```bash
+git clone https://github.com/<your-username>/simple-streamlit-app.git
+cd simple-streamlit-app
 
