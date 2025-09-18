@@ -14,4 +14,4 @@ def greet(name: str) -> str:
 if __name__ == "__main__":
     # Run the app with a default name
     print(greet("Polytechnique"))
-≈
+
